@@ -1,6 +1,7 @@
 .landingPage {
   position: relative;
   z-index: 1;
+  background-color: #305374;
 }
 
 .headerImage {
@@ -10,6 +11,10 @@
   z-index:-1;
 }
 
+.block {
+    display: inline;
+}
+
 .content {
   padding: 2rem;
   text-align: center;
@@ -17,11 +22,11 @@
 }
 
 .logoContainer {
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(0, -25%);
-  z-index: 1;
+    position: absolute; /* Use relative positioning */
+    justify-content: center;
+    align-items: center;
+    top: 300px;
+    left: 50%;
   }
   
   .rotatingLogo {
@@ -45,4 +50,47 @@
     padding: 100px 20px; /* Adjust padding as needed */
     text-align: center;
     color: white;
+  }
+
+  .greenTitle {
+    color: #DBF4A7;
+    font-size: 2rem;
+    margin-bottom: 1rem; /* Adjust spacing between titles and paragraphs */
+  }
+  
+  .bigTextContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 80rem; /* Adjust as needed */
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+  
+  .textLeft,
+  .textRight {
+    color:#F4EAD7;
+    flex: 1;
+    text-align: left;
+  }
+  
+  .textLeft {
+    margin-right: 1rem; /* Adjust spacing between paragraphs */
+    text-align: right;
+  }
+  
+  .textRight {
+    margin-left: 1rem; /* Adjust spacing between paragraphs */
+  }
+
+  .separator {
+    width: 40rem; 
+    height: 30rem;
+    background-color: #dab281;
+    margin: 2rem; 
   }

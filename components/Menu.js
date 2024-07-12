@@ -5,6 +5,9 @@ import '/styles/BobaSection.css'; // Import the custom CSS file
 import CoffeeSection from './CoffeeSection';
 import BobaSection from './BobaSection';
 import MenuSelector from './MenuSelector'; // Import the MenuSelector component
+import SpecialtyDrinks from './SpecialtyDrinksModel';
+import HotBitesSection from './HotBites';
+import SandwichesSaladsSection from './Sandwich';
 
 const MenuPage = () => {
   const [selectedMenu, setSelectedMenu] = useState('all'); // State to track selected menu
@@ -33,11 +36,16 @@ const MenuPage = () => {
           <>
             <CoffeeSection />
             <BobaSection />
+            <SpecialtyDrinks />
+            <HotBitesSection />
+            <SandwichesSaladsSection />
             {/* Include other sections */}
           </>
         )}
         {selectedMenu === 'coffee' && <CoffeeSection />}
         {selectedMenu === 'boba' && <BobaSection />}
+        {selectedMenu === 'hot-bites' && <HotBitesSection />}
+        {selectedMenu === 'sandwiches-salads' && <SandwichesSaladsSection />}
         {/* Add other sections based on selectedMenu */}
       </motion.div>
     </div>

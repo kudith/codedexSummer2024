@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'next-themes'
 import './globals.css'
 import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 export const metadata = {
   title: 'Sip & Play Cafe',
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class">
           <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

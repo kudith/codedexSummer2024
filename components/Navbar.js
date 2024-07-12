@@ -23,7 +23,7 @@ const Navbar = () => {
             <p className="text-light-brown text-sm font-hind">Forget and savor that sip.</p>
           </div>
         </div>
-        <div className="hidden md:flex space-x-8 text-eggshell text-lg">
+        <div className="hidden md:flex space-x-8 text-eggshell text-2xl">
           <NavLink href="/" label="Home" />
           <NavLink href="/menu-page" label="Menu" />
           <NavLink href="/events" label="Events" />

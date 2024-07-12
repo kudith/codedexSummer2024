@@ -8,7 +8,8 @@ const MenuSelector = ({ onSelect, selected }) => {
     { id: 'boba', label: 'Boba' },
     { id: 'hot-bites', label: 'Hot Bites' },
     { id: 'sandwiches-salads', label: 'Sandwiches and Salads' },
-    { id: 'seasonal-menu', label: 'Seasonal Menu' }
+    { id: 'seasonal-menu', label: 'Seasonal Menu' },
+    { id: 'beer-wine', label: 'Beer/Wine' },
   ];
 
   return (

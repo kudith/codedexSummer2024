@@ -1,9 +1,11 @@
 import React from 'react';
 import styles from './LandingPage.module.css';
+import SocialMediaEmbeds from './SocialMediaPosts';
 const headerImage = "/assets/header-bg.png";
 const logoLight = "/assets/logoLight.png";
 const logo = "/assets/logo.png";
 const turtle = "/assets/turtle.png";
+
 
 const LandingPage = () => {
   return (
@@ -45,6 +47,7 @@ const LandingPage = () => {
                 </p>
             </div>
         </div>
+        <SocialMediaEmbeds />
 
     </div>
     

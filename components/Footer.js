@@ -24,10 +24,10 @@ const Footer = () => {
         <div className="flex-1 px-10 py-5"> 
           <h3 className="text-lg font-bold text-light-green font-inknut">Contact Us</h3>
           <ul className="list-none mt-2 font-hind">
-            <li class="my-1">sipnplaynyc@gmail.com</li>
-            <li class="my-1">718-971-1684</li>
+            <li className="my-1">sipnplaynyc@gmail.com</li>
+            <li className="my-1">718-971-1684</li>
           </ul>
-            <div class="social-container flex justify-around mt-4">
+            <div className="social-container flex justify-around mt-4">
                 <a href="https://discord.com/invite/bdURvWC" className="discord social">
                 <FontAwesomeIcon icon={faDiscord} size="1x" />
                 </a>

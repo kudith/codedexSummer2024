@@ -11,9 +11,10 @@ const LandingPage = () => {
         <div className="block">
             <img src={headerImage} alt="Cafe Header" className={styles.headerImage} />
             <div className={styles.logoContainer}>
-            <img src={logoLight} alt="Logo" className={styles.rotatingLogo} />
+                <img src={logoLight} alt="Logo" className={styles.rotatingLogo} />
+            </div>
         </div>
-        </div>
+
         <div className={styles.section1Container}>
             <div className={styles.bigTextContainer}>
                 <div className={styles.textContainer}>
@@ -31,6 +32,7 @@ const LandingPage = () => {
                 </div>
             </div>
         </div>
+
         <div className={styles.section2}>
             <div className={styles.section2ImageHolder}>
                 <div className={styles.section2ImageShadow}></div>
@@ -43,6 +45,7 @@ const LandingPage = () => {
                 </p>
             </div>
         </div>
+
     </div>
     
   );

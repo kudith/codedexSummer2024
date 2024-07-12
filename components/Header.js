@@ -1,33 +1,35 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
-import styles from './header.module.css';
+import React, { useState } from 'react';
 import RightNav from './RightNav.js';
-const logo = "/assets/logo.png";
-const header = "/assets/header-bg.jpg";
+const logo = '/assets/logo.png'; 
+const headerBg = '/assets/header-bg.jpg'; 
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-      <header className={styles.header}>
-          {/* Left section with logo and brand name */}
-          <div className={styles.left}>
-              <img src={logo} alt="Logo" className={styles.logo} />
-              <h1 className={styles.brandName}>Sip & Play Cafe</h1>
-          </div>
+    <header className="sticky top-0 bg-blue-800 text-white flex justify-between items-center px-4 py-2 z-10">
+      {/* Left section with logo and brand name */}
+      <div className="flex items-center">
+        <img src={logo} alt="Logo" className="w-12 mr-2" />
+        <h1 className="text-xl font-bold">Sip & Play Cafe</h1>
+      </div>
 
-          {/* Right section with navigation tabs and mode switch button */}
-            <div className={styles.hamburger} onClick={toggleMenu}>
-              <div className={styles.bar}></div>
-              <div className={styles.bar}></div>
-              <div className={styles.bar}></div>
-            </div>
-            <RightNav />
-      </header>
+      {/* Right section with navigation tabs and mode switch button */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className="bar h-0.5 w-5 bg-white mb-1"></div>
+        <div className="bar h-0.5 w-5 bg-white mb-1"></div>
+        <div className="bar h-0.5 w-5 bg-white"></div>
+      </div>
+      
+      {/* Conditionally render RightNav based on menu state */}
+      {isMenuOpen && <RightNav />}
+    </header>
   );
 };
 

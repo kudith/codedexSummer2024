@@ -1,9 +1,11 @@
-import Header from '../components/Header'
+import "./globals.css"
+import LandingPage from '../components/LandingPage';
 
 export default function Home() {
   return (
-    <div className="bg-sea-blue dark:bg-dark-brown min-h-screen text-eggshell">
-      <Header />
+    <div>
+      <LandingPage />
     </div>
-  )
+  );
 }
+

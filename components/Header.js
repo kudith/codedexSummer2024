@@ -1,23 +1,36 @@
-import Image from 'next/image'
+"use client"
 
-export default function Header() {
+import React, { useState } from 'react';
+import RightNav from './RightNav.js';
+const logo = '/assets/logo.png'; 
+const headerBg = '/assets/header-bg.jpg'; 
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <header className="relative h-screen">
-      <div className="relative h-full w-full">
-        <Image
-          src="/assets/header-bg.jpg"
-          alt="Cafe background"
-          fill
-          quality={100}
-          className="absolute inset-0 z-0 object-cover"
-        />
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-        <div className="relative z-10 flex items-center justify-center h-full text-center text-eggshell">
-          <div>
-            <h1 className="text-5xl font-bold">Welcome to Sip & Play Cafe</h1>
-          </div>
-        </div>
+    <header className="sticky top-0 bg-blue-800 text-white flex justify-between items-center px-4 py-2 z-10">
+      {/* Left section with logo and brand name */}
+      <div className="flex items-center">
+        <img src={logo} alt="Logo" className="w-12 mr-2" />
+        <h1 className="text-xl font-bold">Sip & Play Cafe</h1>
       </div>
+
+      {/* Right section with navigation tabs and mode switch button */}
+      <div className="hamburger" onClick={toggleMenu}>
+        <div className="bar h-0.5 w-5 bg-white mb-1"></div>
+        <div className="bar h-0.5 w-5 bg-white mb-1"></div>
+        <div className="bar h-0.5 w-5 bg-white"></div>
+      </div>
+      
+      {/* Conditionally render RightNav based on menu state */}
+      {isMenuOpen && <RightNav />}
     </header>
-  )
-}
+  );
+};
+
+export default Header;

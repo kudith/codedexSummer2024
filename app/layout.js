@@ -1,6 +1,9 @@
-import { ThemeProvider } from 'next-themes'
-import './globals.css'
+import "@fontsource/inknut-antiqua"
+import "@fontsource/hind"
+import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import "./globals.css"
+
 
 export const metadata = {
   title: 'Sip & Play Cafe',
@@ -12,10 +15,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body>
-        <ThemeProvider attribute="class">
-          <Navbar />
+          <Navbar/>
           {children}
-        </ThemeProvider>
+          <Footer />
       </body>
     </html>
   )

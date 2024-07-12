@@ -1,5 +1,5 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: 'class', // or 'media' or 'class'
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
@@ -15,6 +15,10 @@ module.exports = {
         'dark-green': '#3F593F',
         'olive-green': '#94B973',
         'light-green': '#DBF4A7',
+      },
+      fontFamily: {
+        inknut: ['Inknut Antiqua', 'serif'],
+        hind: ['Hind', 'sans-serif'],
       },
     },
   },

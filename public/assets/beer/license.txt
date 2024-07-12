@@ -1,0 +1,8 @@
+Model Information:
+* title:	Pint with realistic physics
+* source:	https://sketchfab.com/3d-models/pint-with-realistic-physics-40a318125b154d3fba5a9ed301c27e65
+* author:	Lycortas (https://sketchfab.com/Lycortas)
+
+Model License:
+* license type:	SKETCHFAB Standard (https://sketchfab.com/licenses)
+* requirements:	Under basic restrictions, use worldwide, on all types of media, commercially or not, and in all types of derivative works

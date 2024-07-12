@@ -8,6 +8,8 @@ import MenuSelector from './MenuSelector'; // Import the MenuSelector component
 import SpecialtyDrinks from './SpecialtyDrinksModel';
 import HotBitesSection from './HotBites';
 import SandwichesSaladsSection from './Sandwich';
+import SeasonalMenu from './SeasonalMenu';
+import BeerWineSection from './BeerWine';
 
 const MenuPage = () => {
   const [selectedMenu, setSelectedMenu] = useState('all'); // State to track selected menu
@@ -39,6 +41,8 @@ const MenuPage = () => {
             <SpecialtyDrinks />
             <HotBitesSection />
             <SandwichesSaladsSection />
+            <SeasonalMenu/>
+            <BeerWineSection/>
             {/* Include other sections */}
           </>
         )}
@@ -46,7 +50,8 @@ const MenuPage = () => {
         {selectedMenu === 'boba' && <BobaSection />}
         {selectedMenu === 'hot-bites' && <HotBitesSection />}
         {selectedMenu === 'sandwiches-salads' && <SandwichesSaladsSection />}
-        {/* Add other sections based on selectedMenu */}
+        {selectedMenu === 'seasonal-menu' && <SeasonalMenu />}
+        {selectedMenu === 'beer-wine' && <BeerWineSection />}
       </motion.div>
     </div>
   );

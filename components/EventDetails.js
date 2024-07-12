@@ -1,10 +1,10 @@
 import React from 'react';
 
 const EventDetails = ({ event }) => {
-  if (!event) return <div>Select a date to view events.</div>;
+  if (!event) return <div style={{ color: "black"}}>Select a date to view events.</div>;
 
   return (
-    <div>
+    <div style={{ color: "black"}}>
       <h2>{event.title}</h2>
       <p>{event.description}</p>
       <p>

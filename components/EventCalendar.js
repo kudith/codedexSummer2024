@@ -47,6 +47,8 @@ import moment from 'moment';
 import events from '../data/events';
 import EventDetails from './EventDetails';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
+import CustomToolbar from './CustomToolbar';
+// import EventDetailModal from './EventDetailModal';
 
 const localizer = momentLocalizer(moment);
 
@@ -55,10 +57,21 @@ const EventCalendar = () => {
 
   const handleSelectEvent = (event) => {
     setSelectedEvent(event);
+    // setIsModalOpen(true);
   };
+
+  // const [isModalOpen, setIsModalOpen] = useState(false);
+
+
+  // const handleModalClose = () => {
+  //   setIsModalOpen(false);
+  // };
+
+
 
   return (
     <div>
+      {/* <EventDetailModal isOpen={isModalOpen} onClose={handleModalClose} event={selectedEvent} />   */}
       <Calendar
         localizer={localizer}
         events={events}
@@ -67,6 +80,9 @@ const EventCalendar = () => {
         style={{ height: 350, margin: '5px', width: 350, color:'black' }}
         onSelectEvent={handleSelectEvent}
         views={['month']} // Only allow the month view
+        components={{
+          toolbar: CustomToolbar,
+        }}
       />
 
       <EventDetails event={selectedEvent} style={{ height: 350, margin: '5px', width: 35 }} />

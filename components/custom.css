@@ -1,6 +1,8 @@
+/* custom.css */
+
 @keyframes scroll {
     0% {
-      transform: translateX(100%);
+      transform: translateX(0);
     }
     100% {
       transform: translateX(-100%);
@@ -8,5 +10,8 @@
   }
   
   .animate-scroll {
-    animation: scroll 50s linear infinite;
+    display: flex;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
   }
+  

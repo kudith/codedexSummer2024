@@ -17,7 +17,7 @@ const RightNav = () => {
             <nav className={styles.navLinks}>
               <ul>
                 <li><a href="/">home</a></li>
-                <li><a href="/menu">menu</a></li>
+                <li><a href="/menu-page">menu</a></li>
                 <li><a href="/events">events</a></li>
                 {/* Toggle switch
                 <label className={styles.switch}>

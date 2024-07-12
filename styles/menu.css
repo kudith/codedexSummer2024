@@ -1,0 +1,32 @@
+/* menu.css */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styling for the 3D model container */
+@layer components {
+  .circle-container {
+    @apply w-80 h-80 bg-eggshell rounded-full flex justify-center items-center;
+  }
+
+  .square-container {
+    @apply w-40 h-60 bg-olive-green flex justify-center items-center rounded-xl shadow-lg;
+    transform: translateY(
+      2rem
+    ); /* Adjust the Y translation to make the square more prominent */
+  }
+
+  @screen md {
+    .circle-container {
+      @apply w-96 h-96;
+    }
+
+    .square-container {
+      @apply w-48 h-72;
+      transform: translateY(
+        3rem
+      ); /* Adjust the Y translation for larger screens */
+    }
+  }
+}

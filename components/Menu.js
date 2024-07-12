@@ -1,7 +1,6 @@
 "use client"
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import '/styles/BobaSection.css'; // Import the custom CSS file
 import CoffeeSection from './CoffeeSection';
 import BobaSection from './BobaSection';
 import MenuSelector from './MenuSelector'; // Import the MenuSelector component

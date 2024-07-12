@@ -18,13 +18,13 @@ export default function Navbar() {
         Sip & Play Cafe
       </div>
       <div className="space-x-4">
-        <a href="#" className="text-eggshell hover:text-light-green">
+        <a href="/" className="text-eggshell hover:text-light-green">
           Home
         </a>
-        <a href="#" className="text-eggshell hover:text-light-green">
+        <a href="/menu" className="text-eggshell hover:text-light-green">
           Menu
         </a>
-        <a href="#" className="text-eggshell hover:text-light-green">
+        <a href="/events" className="text-eggshell hover:text-light-green">
           Events
         </a>
       </div>

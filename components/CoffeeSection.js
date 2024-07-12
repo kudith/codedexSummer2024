@@ -62,7 +62,7 @@ const CoffeeSection = () => {
         </motion.h2>
         <motion.div
           variants={listVariants}
-          className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-eggshell text-lg"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-eggshell text-lg cursor-pointer"
         >
           {[
             { name: 'LATTE', price: '$4.75 (Hot) / $5.25 (Cold)' },

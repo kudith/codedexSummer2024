@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/hind": "^5.0.13",
+    "@fontsource/inknut-antiqua": "^5.0.13",
     "@react-spring/web": "^9.7.3",
     "@react-three/drei": "^9.108.3",
     "@react-three/fiber": "^8.16.8",

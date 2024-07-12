@@ -16,6 +16,10 @@ module.exports = {
         'olive-green': '#94B973',
         'light-green': '#DBF4A7',
       },
+      fontFamily: {
+        inknut: ['Inknut Antiqua', 'serif'],
+        hind: ['Hind', 'sans-serif'],
+      },
     },
   },
   plugins: [],

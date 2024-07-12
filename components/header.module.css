@@ -1,33 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;700&family=Hind:wght@400;700&display=swap");
+
+
 .header {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: #305374;
-    color: white;
-    transition: background 0.3s, color 0.3s;
-    z-index: 10;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #305374;
+  color: white;
+  transition: background 0.3s, color 0.3s;
+  z-index: 10;
 }
 
 .left {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo {
-    width: 60px;
-    margin-right: 5px;
+  width: 60px;
+  margin-right: 5px;
 }
 
 .brandName {
-    font-size: 1.5rem;
-    font-weight: bold;
+  font-family: "Inknut Antiqua", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
-  /* .hamburger {
+/* .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;

@@ -1,8 +1,8 @@
-import { ThemeProvider } from 'next-themes'
-import './globals.css'
-import Header from '../components/Header'
+import "@fontsource/inknut-antiqua"
+import "@fontsource/hind"
 import Footer from '../components/Footer'
-import Navbar from '@/components/Navbar'
+import Navbar from '../components/Navbar'
+import "./globals.css"
 
 
 export const metadata = {
@@ -15,11 +15,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body>
-        <ThemeProvider attribute="class">
           <Navbar/>
           {children}
           <Footer />
-        </ThemeProvider>
       </body>
     </html>
   )

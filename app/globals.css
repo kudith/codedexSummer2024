@@ -1,8 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 @import url("https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500;600;700&family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&display=swap");
+
 
 body {
   @apply font-hind;
@@ -16,3 +16,31 @@ h5,
 h6 {
   @apply font-inknut;
 }
+
+
+.footer_bg {
+    background: #263640;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+  .button:hover{
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: underline;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+
+

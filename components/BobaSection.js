@@ -1,14 +1,25 @@
-import React from 'react';
-import { Canvas } from '@react-three/fiber';
+import React, { useRef } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, Stage, Environment, OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
 
 function BobaModel() {
   const { scene } = useGLTF('/assets/boba_tea_cup/scene.gltf');
+  const modelRef = useRef();
 
-  scene.scale.set(1.5, 1.5, 1.5);
+  useFrame(() => {
+    modelRef.current.rotation.y += 0.001;
 
-  return <primitive object={scene} />;
+  });
+
+  scene.scale.set(0.9, 0.9, 0.9);
+
+  return (
+    <>
+      <primitive object={scene} ref={modelRef} />
+      <OrbitControls enableZoom={false} />
+    </>
+  );
 }
 
 const listVariants = {

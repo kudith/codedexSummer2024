@@ -1,19 +1,21 @@
 import React from 'react';
 import styles from './LandingPage.module.css';
 import SocialMediaEmbeds from './SocialMediaPosts';
+import SectionWithSpeechBubbles from './SectionWithSpeechBubbles';
+import BoardGameCarousel from './BoardGame';
 const headerImage = "/assets/header-bg.png";
 const logoLight = "/assets/logoLight.png";
 const logo = "/assets/logo.png";
 
 const LandingPage = () => {
   return (
-    <div className={styles.landingPage}>
-      <div className="block">
-        <img src={headerImage} alt="Cafe Header" className={styles.headerImage} />
-        <div className={styles.logoContainer}>
-          <img src={logoLight} alt="Logo" className={styles.rotatingLogo} />
+    <div className="relative z-10 bg-sea-blue">
+        <div className="relative h-[70vh]">
+            <img src={headerImage} alt="Cafe Header" className="w-full h-full object-cover" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-2/3 h-2/3 flex justify-center items-center">
+                <img src={logoLight} alt="Logo" className="rotating-logo" />
+            </div>
         </div>
-      </div>
 
       <div className={styles.section1Container}>
         <div className={styles.bigTextContainer}>
@@ -41,12 +43,18 @@ const LandingPage = () => {
         <div className={styles.section2TextContainer}>
           <p className={styles.section2Header}>so, how do we work?</p>
           <p className={styles.section2Body}>
-            Come on in with your friends and family and play board games from our collection of over 500+ games! Just $10 a person for 3 hours of gameplay. ($12 a person Friday-Sunday and Holidays) Play while enjoying bubble tea, coffee, beer sandwiches or salads and have a great time! If you want to guarantee a table, you can make a reservation which is $15 a person for 3 hours of gameplay. <br />
-            <a className="text-2xl font-bold font-inknut underline" href="https://www.exploretock.com/sipnplay/">Sip&Play</a>
+            Come on in with your friends and family and play board games from our collection of over 500+ games! 
+            Just $10 a person for 3 hours of gameplay. ($12 a person Friday-Sunday and Holidays) 
+            Play while enjoying bubble tea, coffee, beer sandwiches or salads and have a great time! 
+            If you want to guarantee a table, you can make a reservation which is $15 a person for 3 hours of gameplay. 
+            <br></br>
+            <br></br>
+            <a className="text-xl font-bold font-inknut" href="https://www.exploretock.com/sipnplay/">RSVP</a>
           </p>
         </div>
       </div>
-      
+      <SectionWithSpeechBubbles />
+      <BoardGameCarousel />
       <SocialMediaEmbeds />
     </div>
   );

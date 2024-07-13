@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -12,15 +12,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-sea-blue px-4 py-4 md:px-8 lg:px-16">
+    <nav className="sticky top-0 bg-sea-blue bg-opacity-90 backdrop-filter backdrop-blur-lg px-4 py-4 md:px-8 lg:px-16 z-50">
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <div className="relative w-20 h-20">
             <Image src={logo} alt="Sip & Play Café Logo" layout="fill" objectFit="contain" />
           </div>
           <div>
-            <h1 className="text-eggshell text-3xl font-bold font-inknut md:text-4xl">Sip & Play Café</h1>
-            <p className="text-light-brown text-sm font-hind">Forget and savor that sip.</p>
+            <h1 className="text-eggshell text-3xl font-bold font-inknut md:text-4xl mb-2">Sip & Play Café</h1>
           </div>
         </div>
         <div className="hidden md:flex space-x-8 text-eggshell text-2xl">
@@ -50,7 +49,7 @@ const Navbar = () => {
 const NavLink = ({ href, label }) => {
   return (
     <Link href={href}>
-      <div className="hover:text-light-brown cursor-pointer">{label}</div>
+      <div className="transition duration-300 ease-in-out hover:text-light-brown cursor-pointer">{label}</div>
     </Link>
   );
 };

@@ -44,3 +44,16 @@ a.twitter {
 a.instagram {
     color: white;
 }
+
+.rotating-logo {
+    animation: circularMotion 30s linear infinite;
+  }
+  
+  @keyframes circularMotion {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
+  }

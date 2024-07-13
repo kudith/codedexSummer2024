@@ -11,7 +11,7 @@ import SeasonalMenu from './SeasonalMenu';
 import BeerWineSection from './BeerWine';
 
 const MenuPage = () => {
-  const [selectedMenu, setSelectedMenu] = useState('all'); // State to track selected menu
+  const [selectedMenu, setSelectedMenu] = useState('coffee'); // Set default to 'coffee'
 
   const handleMenuSelect = (menu) => {
     setSelectedMenu(menu);
@@ -40,8 +40,8 @@ const MenuPage = () => {
             <SpecialtyDrinks />
             <HotBitesSection />
             <SandwichesSaladsSection />
-            <SeasonalMenu/>
-            <BeerWineSection/>
+            <SeasonalMenu />
+            <BeerWineSection />
             {/* Include other sections */}
           </>
         )}

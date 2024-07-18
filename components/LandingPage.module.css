@@ -1,21 +1,4 @@
 
-
-.section2 {
-  background-color: #dab281;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 50px;
-  box-sizing: border-box;
-  position: relative;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
-}
-
 .section2TextContainer {
   margin-top: 30px;
   margin-bottom: 30px;

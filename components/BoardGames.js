@@ -48,22 +48,24 @@ const BoardGameCarousel = () => {
   ];
 
   return (
-    <div className="max-w-screen-lg mx-auto px-4">
+    <div className="mx-12">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold text-gray-800">Board Games Carousel</h2>
+        <h2 className="text-3xl font-bold align-center text-eggshell">Check out our board games!</h2>
         <div className="flex space-x-2">
           <button className="bg-gray-200 px-3 py-1 rounded-md text-sm text-gray-800 hover:bg-gray-300 focus:outline-none">Previous</button>
           <button className="bg-gray-200 px-3 py-1 rounded-md text-sm text-gray-800 hover:bg-gray-300 focus:outline-none">Next</button>
         </div>
       </div>
 
-      <div className="overflow-x-auto whitespace-nowrap">
+      <div className="overflow-auto whitespace-nowrap">
         {boardGames.map((game) => (
-          <div key={game.id} className="inline-block mr-4 max-w-xs rounded-lg overflow-hidden shadow-lg">
-            <img src={game.image} alt={game.name} className="w-full h-48 object-cover" />
-            <div className="p-4 bg-white">
-              <h3 className="text-lg font-semibold text-gray-800 mb-2">{game.name}</h3>
-              <p className="text-sm text-gray-600">{game.description}</p>
+          <div key={game.id} className="inline-block mx-8 bg-eggshell rounded-lg shadow-lg flex-row">
+            <div className="flex flex-row span p-5 md:flex-column">
+              <img src={game.image} alt={game.name} className="w-72 h-72 m-3 float rounded-md" />
+              <div className="p-4">
+                <h3 className="text-3xl font-inknut font-bold text-dark-brown">{game.name}</h3>
+                <p className="text-sm text-gray-600">{game.description}</p>
+              </div>
             </div>
           </div>
         ))}

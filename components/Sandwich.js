@@ -1,27 +1,57 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { useGLTF, Stage, Environment, OrbitControls } from '@react-three/drei';
 import { motion } from 'framer-motion';
 
-const SandwichesSection = () => {
-  const listVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
+function SandwichModel() {
+  const { scene } = useGLTF('/assets/club_sandwich_pile/scene.gltf');
+  const modelRef = useRef();
 
-  const itemVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: { opacity: 1, x: 0 },
-    hover: {
-      scale: 1.05,
-      transition: {
-        yoyo: Infinity,
-      },
+  useFrame(() => {
+    modelRef.current.rotation.y += 0.01;
+  });
+
+  scene.scale.set(1.5, 1.5, 1.5);
+
+  return <primitive object={scene} ref={modelRef} />;
+}
+
+const listVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
     },
-  };
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -20 },
+  visible: { opacity: 1, x: 0 },
+  hover: {
+    scale: 1.05,
+    transition: {
+      yoyo: Infinity,
+    },
+  },
+};
+
+const SandwichesSection = () => {
+  const canvasRef = useRef();
+
+  useEffect(() => {
+    const handleWheel = (event) => {
+      if (canvasRef.current && canvasRef.current.contains(event.target)) {
+        event.preventDefault();
+      }
+    };
+    window.addEventListener('wheel', handleWheel, { passive: false });
+
+    return () => {
+      window.removeEventListener('wheel', handleWheel);
+    };
+  }, []);
 
   return (
     <motion.div
@@ -29,11 +59,11 @@ const SandwichesSection = () => {
       animate="visible"
       variants={listVariants}
       id="sandwiches-section"
-      className="flex flex-col lg:flex-row-reverse justify-between px-6 lg:px-32 py-32 gap-20 shadow-xl"
+      className="flex flex-col lg:flex-row justify-between px-6 lg:px-32 py-32 gap-20 shadow-xl"
     >
-      <div className="lg:w-1/2 flex flex-col justify-center lg:order-2">
+      <div className="lg:w-1/2 flex flex-col justify-center">
         <motion.h2
-          initial={{ opacity: 0, x: 20 }}
+          initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
           className="text-4xl font-bold mb-6 text-light-brown"
@@ -69,13 +99,31 @@ const SandwichesSection = () => {
           ))}
         </motion.div>
       </div>
-      <div className="lg:w-1/2 h-96 relative lg:order-1">
-        <img
-          src="/assets/sandwich.jpg"
-          alt="Sandwiches"
-          className="w-full h-full object-cover rounded-lg shadow-xl"
-        />
-      </div>
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: "easeInOut" }}
+        className="relative lg:w-1/2 h-96 shadow-xl rounded-2xl"
+      >
+        <div className="absolute inset-0 flex justify-center items-center">
+          <div className="w-full h-full rounded-lg overflow-hidden" ref={canvasRef}>
+            <Canvas camera={{ fov: 45, near: 0.1, far: 1000, position: [5, 5, 5] }}>
+              <ambientLight intensity={0.5} />
+              <spotLight position={[15, 20, 10]} angle={0.3} penumbra={1} intensity={2} castShadow />
+              <pointLight position={[-10, -10, -10]} intensity={1.5} />
+              <Environment preset="sunset" />
+              <Stage environment="city" intensity={0.6}>
+                <SandwichModel />
+              </Stage>
+              <OrbitControls
+                enableZoom={true}
+                enablePan={false}
+                enableRotate={true}
+              />
+            </Canvas>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 };

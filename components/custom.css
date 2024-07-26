@@ -45,7 +45,7 @@ a.instagram {
     color: white;
 }
 
-.rotating-logo {
+.rotating {
     animation: circularMotion 30s linear infinite;
   }
   

@@ -23,7 +23,7 @@ const Navbar = () => {
             <Image src={logo} alt="Sip & Play Café Logo" layout="fill" objectFit="contain" />
           </div>
           <div>
-            <h1 className="text-eggshell text-3xl font-bold font-inknut md:text-4xl mb-2">Sip & Play Café</h1>
+            <h1 className="text-eggshell text-3xl font-inknut md:text-4xl mb-2">Sip & Play Café</h1>
           </div>
         </div>
         <div className="hidden md:flex space-x-8 text-eggshell text-2xl">

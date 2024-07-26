@@ -2,8 +2,8 @@
 import React, { useState } from 'react';
 import EventCalendar from './EventCalendar';
 import EventList from './EventList';
-import events from '../data/events';
-import { getUpcomingEvents, getEventsThisWeek } from '../utils/eventFilters';
+import events from '../../../data/events';
+import { getUpcomingEvents, getEventsThisWeek } from '../../../utils/eventFilters';
 
 const CalendarSection = () => {
   const [view, setView] = useState('upcoming');

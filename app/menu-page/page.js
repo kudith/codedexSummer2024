@@ -1,5 +1,5 @@
 import "../globals.css"
-import Menu from '../../components/Menu';
+import Menu from '../../components/Pages/Menu/Menu';
 
 export default function MenuPage() {
   return (

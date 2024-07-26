@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './LandingPage.module.css';
+import styles from '../Pages/Home/LandingPage.module.css';
 const logo = "/assets/logo.png";
 const owner = "/assets/owner_rm.png"
 

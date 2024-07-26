@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from 'react';
-import './custom.css';
+import '../custom.css';
 import { FacebookEmbed } from 'react-social-media-embed';
 import { InstagramEmbed } from 'react-social-media-embed';
 import { TikTokEmbed } from 'react-social-media-embed';

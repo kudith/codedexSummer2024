@@ -31,7 +31,7 @@ const SocialMediaEmbeds = () => {
 
   return (
     <div className="mt-24 bg-sea-blue">
-        <h1 className="text-3xl text-light-green font-hind my-8 text-center">don't believe us? check out our socials</h1>
+        <h1 className="text-3xl text-light-green font-hind my-8 text-center">don&apos;t believe us? check out our socials</h1>
         <div className="relative overflow-hidden py-5">
             <div className="flex  mb-24 content-center space-x-12 h-2/6 animate-scroll bg-seablue" id="scrollContainer">
                 <h1 className="text-3xl text-light-green font-hind mx-5 text-center align-baseline">the best coffee</h1>

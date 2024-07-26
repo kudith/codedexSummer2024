@@ -4,7 +4,7 @@ import CafeHero from '../../Section/CafeHero';
 import AboutUs from '../../Section/AboutUs';
 import SocialMediaEmbeds from '../../Section/SocialMediaPosts';
 import SectionWithSpeechBubbles from '../../Section/SectionWithSpeechBubbles';
-import BoardGameCarousel from '../Menu/BoardGames';
+import BoardGameCarousel from '../../Section/BoardGames';
 import HowWeWork from '../../Section/HowWeWork';
 const headerImage = "/assets/header-bg.png";
 const logoLight = "/assets/logoLight.png";

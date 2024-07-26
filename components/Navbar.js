@@ -16,14 +16,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="sticky top-0 bg-sea-blue bg-opacity-90 backdrop-filter backdrop-blur-lg px-4 py-4 md:px-8 lg:px-16 z-50">
+    <nav className="sticky top-0 bg-sea-blue bg-opacity-90 backdrop-filter backdrop-blur-lg p-2 shadow-xl  md:px-8 lg:px-16 z-50 font-inknut">
       <div className="flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <div className="relative w-20 h-20">
             <Image src={logo} alt="Sip & Play Café Logo" layout="fill" objectFit="contain" />
           </div>
           <div>
-            <h1 className="text-eggshell text-3xl font-inknut md:text-4xl mb-2">Sip & Play Café</h1>
+            <h1 className="text-eggshell text-2xl font-inknut md:text-4xl mb-2">Sip & Play Café</h1>
           </div>
         </div>
         <div className="hidden md:flex space-x-8 text-eggshell text-2xl">

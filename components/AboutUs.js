@@ -5,7 +5,7 @@ const owner = "/assets/owner_rm.png"
 
 const AboutUs = () => {
     return (
-        <div className="p-3">
+        <div className="p-3 md:h-[550px] flex items-center justify-center">
             <div className="flex flex-col md:flex-row justify-between w-11/12 max-w-screen-xl mt-5 mb-7 pb-2 mx-auto items-center">
                 <div className="flex flex-col mt-3 items-end">
                     <p className="font-inknut text-3xl mb-3 mx-3 text-light-green">Who even</p>

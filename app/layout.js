@@ -1,8 +1,9 @@
 import "@fontsource/inknut-antiqua"
 import "@fontsource/hind"
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
+import Footer from '../components/Section/Footer'
+import Navbar from '../components/Header/Navbar'
 import "./globals.css"
+import Header from "@/components/Header/Header";
 
 
 export const metadata = {
@@ -15,7 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head />
       <body>
-          <Navbar/>
+          <Header/>
           {children}
           <Footer />
       </body>

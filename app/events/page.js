@@ -1,4 +1,4 @@
-import CalendarSection from "@/components/CalendarSection";
+import CalendarSection from "@/components/Pages/Events/CalendarSection";
 
 export default function Events() {
   return (

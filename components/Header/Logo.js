@@ -13,7 +13,7 @@ export default function Logo() {
                 />
             </div>
             <div>
-                <h1 className="text-eggshell text-2xl font-inknut md:text-4xl mb-2">Sip & Play Café</h1>
+                <h1 className="text-dark-blue text-2xl font-inknut md:text-4xl mb-2">Sip & Play Café</h1>
             </div>
         </div>
     )
